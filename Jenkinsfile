@@ -87,6 +87,6 @@ pipeline {
                    echo "Deploying to production. Site ID: $NETLIFY_SIDE_ID"
                    node_modules/.bin/netlify status
                 '''
-            
+            }
     }
 }
