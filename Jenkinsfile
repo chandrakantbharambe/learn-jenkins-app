@@ -88,5 +88,6 @@ pipeline {
                    node_modules/.bin/netlify status
                 '''
             }
+        }
     }
 }
