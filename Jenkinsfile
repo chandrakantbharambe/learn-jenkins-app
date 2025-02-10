@@ -92,7 +92,7 @@ pipeline {
                    echo "Staging"
                 '''
                 script {
-                    env.MY_VAR = sh(script: 'date',returnStdout)
+                    env.MY_VAR = sh(script: 'date', returnStdout: true)
                 }
             }
         }
