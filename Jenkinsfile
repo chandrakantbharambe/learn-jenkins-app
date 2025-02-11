@@ -183,7 +183,8 @@ pipeline {
                    npx playwright test --reporter=html
                    echo "Prod"
                 '''
-                 echo "MY_VAR is: $env.MY_VAR"
+                 echo "MY_VAR is : $MY_VAR"
+                 echo "CI_ENVIRONMENT_URL is: $CI_ENVIRONMENT_URL"
             }
             post {
                 always {
