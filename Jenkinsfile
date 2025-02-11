@@ -4,6 +4,7 @@ pipeline {
     environment {
         NETLIFY_SITE_ID = '46bedf02-5d5d-4a49-b784-9278f6922758'
         NETLIFY_AUTH_TOKEN = credentials('netlify-token')
+        MY_VAR = 'Start_Value'
     }
 
     stages {
@@ -107,7 +108,6 @@ pipeline {
 
             environment {
                  CI_ENVIRONMENT_URL="START_VALUE_TO_CHECK_IS_IT_GOING_UPDATE_IN_SH"
-                 MY_VAR="STARTING VALUE"
             }
 
             steps {
@@ -183,8 +183,7 @@ pipeline {
                    npx playwright test --reporter=html
                    echo "Prod"
                 '''
-                 echo "MY_VAR is : $process.env.MY_VAR"
-                 echo "CI_ENVIRONMENT_URL is: $process.env.CI_ENVIRONMENT_URL"
+                 echo "MY_VAR is : $env.MY_VAR"
             }
             post {
                 always {
