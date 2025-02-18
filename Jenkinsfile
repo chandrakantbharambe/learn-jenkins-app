@@ -19,7 +19,6 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'my-aws', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
                     sh '''
-                        aws configure
                         aws s3 ls 
                     '''
                 }
